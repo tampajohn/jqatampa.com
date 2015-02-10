@@ -1,0 +1,143 @@
+@import "includes/bootstrap/bootstrap.less";
+@import "includes/signika.less";
+@import "includes/character.less";
+body
+{
+	background: url('../img/grey.png') repeat;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: 'SignikaRegular', sans-serif;
+	-webkit-animation: animatebg 1s;
+	-webkit-animation-iteration-count:  infinite;
+}
+a
+{
+	color: #5ab09b;
+}
+a:hover
+{
+	color: #88c8b3;
+}
+@-webkit-keyframes animatebg
+{
+	0% { background: url('../img/grey.png'); }
+	50% { background: url('../img/grey2.png'); }
+}
+
+body.alt
+{
+
+	background: url('../img/grey2.png') repeat;
+}
+
+body > div.container.title
+{
+	padding-top: 70px;
+	z-index: 5;
+}
+body > div.container
+{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+
+	h1 
+	{
+		font-family: 'SignikaBold', sans-serif;
+		em
+		{
+			padding-left: 20px;
+			font-size: .5em;
+			font-family: 'SignikaRegular', sans-serif;
+		}
+	}
+}
+
+body > div.container.main
+{
+	z-index: 2;
+	header
+	{
+		padding-top: 60px;
+		background: url('../img/paper_top.png') no-repeat 0 0;
+		background-size: 100% 100%;
+		section
+		{ 
+			label
+			{
+				font-weight: bold;
+			}
+			div.summary
+			{
+				span
+				{
+					margin-top: -25px;
+					margin-left: 120px;
+				}
+			}
+		}
+	}
+
+	article
+	{
+		background: url('../img/paper_slice.png') repeat-y 0 0;
+		background-size: 100% 100%;
+		
+	}
+	footer
+	{
+		background: url('../img/paper_bottom.png') no-repeat 0 0;
+		height:130px;
+		background-size: 100% 100%;
+	}
+
+	> *
+	{
+		padding-left: 30px;		
+		padding-right: 30px;
+	}
+
+	.accordion-toggle:hover
+	{
+		color: #5ab09b;		
+	}
+	i
+	{
+
+		height: auto !important;
+	}
+	.accordion-toggle
+	{
+		border-bottom: 1px dashed;
+		i
+		{
+			-webkit-animation: flipup .5s;
+			-webkit-animation-fill-mode: forwards;
+		}
+	}
+	.accordion-toggle.collapsed
+	{
+		i
+		{
+			-webkit-animation: flipdown .5s;
+			-webkit-animation-fill-mode: forwards;
+		}
+	}
+
+	ul
+	{
+		list-style: none;
+	}
+
+}
+@-webkit-keyframes flipup
+{
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(180deg); }
+}
+@-webkit-keyframes flipdown
+{
+	from { -webkit-transform: rotate(180deg); }
+	to { -webkit-transform: rotate(0deg); }
+}
